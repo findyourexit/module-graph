@@ -159,7 +159,7 @@ fun commitTagAndPush(newVersion: String) {
         println("Committing changes...")
         
         // Step 1: git add (low risk - no rollback needed for this step)
-        runCommand("git", "add", versionFile)
+        runCommand("git", "add", versionFile, readmeFile)
         
         // Step 2: git commit 
         runCommand("git", "commit", "-m", "Bump version to $newVersion")
